@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marker-based WebAR</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.3.0/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
+        <!-- Use your locally stored image marker -->
+        <a-marker type="pattern" url="marker.jpg">
+            <!-- Use your locally stored 3D model -->
+            <a-entity gltf-model="your-model.gltf"></a-entity>
+        </a-marker>
+        <!-- Camera entity for AR -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
